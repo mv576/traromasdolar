@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TR Aromas do Lar</title>
     <style>
-        body {
+   body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -19,6 +19,44 @@
         }
         header h1 {
             margin: 0;
+        }
+        .modal {
+            display: none; /* Oculta o modal por padrão */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .modal-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .modal-content h2 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+        .close-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
         }
         .product-container {
             display: flex;
@@ -42,6 +80,23 @@
             width: 100%;
             border-radius: 8px;
         }
+        .product h2 {
+            margin-top: 10px;
+        }
+        .order-btn {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .order-btn:hover {
+            background-color: #45a049;
+        }
         footer {
             background-color: #4CAF50;
             color: white;
@@ -54,32 +109,45 @@
 </head>
 <body>
     <header>
-        <h1>TR Aromas do Lar</h1>
+        <h1>Loja de Desinfetantes</h1>
     </header>
 
+    <!-- Modal de Boas-Vindas -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <img src="https://i.postimg.cc/cCTcNFLm/Whats-App-Image-2024-09-22-at-11-00-50.jpg" alt="Bem-vindo à nossa loja">
+            <h2>Bem-vindo à Loja TR Aromas do Mar - Cuidando da sua casa com qualidade!</h2>
+            <button class="close-btn" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
     <div class="product-container">
         <div class="product" onclick="showProduct('produto1.html')">
             <img src="https://i.postimg.cc/d05XVfyX/IMG-20240922-WA0002.jpg" alt="Desinfetante Floral"> 
             <h2>Desinfetante Floral</h2>
         </div>
-        <div class="product" onclick="showProduct('produto2.html')">
-            <img src="https://i.postimg.cc/15ZrqHs3/IMG-20240922-WA0001.jpg" alt="Desinfetante Brisa Marinha">
-			
-            <h2>Desinfetante Brisa Marinha</h2>
-        </div>
-        <div class="product" onclick="showProduct('produto3.html')">
-            <img src="https://via.placeholder.com/200x200.png?text=Desinfetante+Citrus" alt="Desinfetante Citrus">
-            <h2>Desinfetante Citrus</h2>
+        <<div class="product" onclick="showProduct('produto4.html')">
+            <img src="https://i.postimg.cc/4y1WxJBp/Whats-App-Image-2024-09-22-at-11-01-45.jpg" alt="Desinfetante Citrus">
+            <h2>Desinfetante Casa Limpa</h2>
         </div>
     </div>
 
     <footer>
-        <p>Loja de Desinfetantes © 2024</p>
+        <p>TR Aromas do Lar © 2024</p>
     </footer>
 
     <script>
         function showProduct(page) {
             window.location.href = page;
+        }
+		
+		 // Função para abrir o modal quando o site carregar
+        window.onload = function() {
+            document.getElementById('welcomeModal').style.display = 'block';
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('welcomeModal').style.display = 'none';
         }
     </script>
 </body>
