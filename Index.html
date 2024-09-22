@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TR Aromas do Lar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .product {
+            background-color: white;
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TR Aromas do Lar</h1>
+    </header>
+
+    <div class="product-container">
+        <div class="product" onclick="showProduct('produto1.html')">
+            <img src="https://i.postimg.cc/d05XVfyX/IMG-20240922-WA0002.jpg" alt="Desinfetante Floral"> 
+            <h2>Desinfetante Floral</h2>
+        </div>
+        <div class="product" onclick="showProduct('produto2.html')">
+            <img src="https://via.placeholder.com/200x200.png?text=Desinfetante+Lavanda" alt="Desinfetante Lavanda">
+			
+            <h2>Desinfetante Lavanda</h2>
+        </div>
+        <div class="product" onclick="showProduct('produto3.html')">
+            <img src="https://via.placeholder.com/200x200.png?text=Desinfetante+Citrus" alt="Desinfetante Citrus">
+            <h2>Desinfetante Citrus</h2>
+        </div>
+    </div>
+
+    <footer>
+        <p>Loja de Desinfetantes © 2024</p>
+    </footer>
+
+    <script>
+        function showProduct(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
