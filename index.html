@@ -35,21 +35,37 @@
         background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .modal-content {
-        background-color: white;
-        margin: 10% auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 600px;
-        text-align: center;
-    }
+   .modal-content {
+    background-color: white;
+    margin: 5% auto; /* Diminuir a margem para que apareça mais centralizado */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ajustar a largura para que seja menor e mais responsivo */
+    max-width: 500px; /* Máximo para que o modal não fique muito grande em telas grandes */
+    text-align: center;
+}
 
-    .modal-content img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 10px;
-    }
+.modal-content img {
+    width: 100%;
+    max-width: 300px; /* Reduzir o tamanho da imagem para ocupar menos espaço no modal */
+    border-radius: 10px;
+}
+
+.close-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block; /* Garante que o botão ocupe toda a largura disponível */
+    width: 100%; /* Torna o botão de fechar mais acessível */
+    max-width: 150px; /* Limita o tamanho máximo do botão */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
     .modal-content h2 {
         margin-top: 15px;
@@ -57,33 +73,31 @@
         color: #333;
     }
 
-    .close-btn {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 15px;
-    }
+   
 
     .product-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
+    display: flex;
+    justify-content: center; /* Alinha os itens ao centro */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo se o espaço não for suficiente */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-top: 20px;
+}
 
-    .product {
-        background-color: white;
-        width: 100%;
-        max-width: 200px;
-        padding: 15px;
-        margin: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
-    }
+.product {
+    background-color: white;
+    width: 220px; /* Defina um tamanho fixo para os itens */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 
     .product:hover {
         transform: scale(1.05);
@@ -180,23 +194,24 @@ footer {
         </div>
     </div>
     <div class="product-container">
-        <div class="product" onclick="showProduct('produto1.html')">
-            <img src="https://i.postimg.cc/d05XVfyX/IMG-20240922-WA0002.jpg" alt="Desinfetante Floral"> 
-            <h2>Desinfetante Floral</h2>
-        </div>
-        <div class="product" onclick="showProduct('produto4.html')">
-            <img src="https://i.postimg.cc/4y1WxJBp/Whats-App-Image-2024-09-22-at-11-01-45.jpg" alt="Desinfetante Citrus">
-            <h2>Desinfetante Casa Limpa</h2>
-        </div>
-	    <div class="product" onclick="showProduct('produto3.html')">
-            <img src="https://i.postimg.cc/SRKygK2K/IMG-20240922-WA0004.jpg" alt="Desinfetante Citrus">
-            <h2>Desinfetante Talco</h2>
+    <div class="product" onclick="showProduct('produto1.html')">
+        <img src="https://i.postimg.cc/d05XVfyX/IMG-20240922-WA0002.jpg" alt="Desinfetante Floral"> 
+        <h2>Desinfetante Floral</h2>
     </div>
-	    </div>
-	    <div class="product" onclick="showProduct('produto2.html')">
-            <img src="https://i.postimg.cc/nc2S6wSY/IMG-20240922-WA0001.jpg" alt="Desinfetante Citrus">
-            <h2>Desinfetante Brisa Marinha</h2>
+    <div class="product" onclick="showProduct('produto4.html')">
+        <img src="https://i.postimg.cc/4y1WxJBp/Whats-App-Image-2024-09-22-at-11-01-45.jpg" alt="Desinfetante Casa Limpa">
+        <h2>Desinfetante Casa Limpa</h2>
     </div>
+    <div class="product" onclick="showProduct('produto3.html')">
+        <img src="https://i.postimg.cc/SRKygK2K/IMG-20240922-WA0004.jpg" alt="Desinfetante Talco">
+        <h2>Desinfetante Talco</h2>
+    </div>
+    <div class="product" onclick="showProduct('produto2.html')">
+        <img src="https://i.postimg.cc/nc2S6wSY/IMG-20240922-WA0001.jpg" alt="Desinfetante Brisa Marinha">
+        <h2>Desinfetante Brisa Marinha</h2>
+    </div>
+</div>
+
 
     <footer>
         <p>TR Aromas do Lar © 2024</p>
